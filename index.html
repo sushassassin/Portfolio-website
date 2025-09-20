@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sushant Kumar Portfolio</title>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animate On Scroll CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+  <!-- External JS libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+  <!-- Header -->
+  <header>
+    <div>
+      <h1>Sushant Kumar</h1>
+      <p>Data Analyst Unveiling Insights through Data | Python | SQL | Data Visualization for 2 years</p>
+      <label class="dark-mode-toggle">
+  <input type="checkbox" id="toggleDarkMode" />
+  Dark Mode
+</label>
+
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <input type="text" id="searchProjects" placeholder="Search projects..." />
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#experience">Professional Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Get in Touch</a>
+  </nav>
+
+  <!-- Main content -->
+  <main id="container">
+    <!-- Intro Section -->
+    <section id="intro" data-aos="fade-up">
+      <p>
+        In an era where data drives decision-making, the power of analytics lies in its ability to transform raw information into actionable insights. As a data analyst, I am passionate about uncovering patterns, trends, and stories hidden within data. My expertise in Python, SQL, and statistical analysis allows me to not only interpret complex datasets but also to create dynamic visualizations that support strategic business decisions. Through my experience with diverse projects and internships, I have honed my skills in data cleaning, exploratory analysis, and predictive modeling, always aiming to provide valuable insights that fuel growth and innovation.
+      </p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-profile" data-aos="fade-up">
+      <div class="about-image">
+        <img src="images/Me.JPEG" alt="Sushant Kumar" class="about-pic" />
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello, I'm Sushant Kumar, a passionate data analyst based in Lucknow. With over a year of experience in Python, SQL, and Excel, I excel at turning complex data into actionable insights.</p>
+        <p>During my internships at Trainity, PsyLiq, and MedTourEasy, I created dynamic dashboards, conducted regression analyses, and performed exploratory data analysis. My work helped reduce call abandonment rates for ABC Insurance and boost profitability for car model analysis projects.</p>
+        <p>Certified in Google Data Analytics and Python for Data Science and AI, I am dedicated to continuous learning and leveraging data to drive organizational success.</p>
+        <p>Explore my projects and professional journey on this website, and feel free to reach out for collaborations or opportunities.</p>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" data-aos="fade-up">
+      <h2>Professional Experience</h2>
+      <div class="experience-container">
+        <!-- Experience Cards -->
+        <div class="experience-card" data-tilt>
+          <h3>Data Analyst Intern, Trainity (March 2024 – October 2024)</h3>
+          <!-- Sub experience blocks -->
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Reduced Call Abandonment:</strong></div>
+           <p>Developed an Excel dashboard for ABC Insurance, reducing call abandonment rates from 30% to 10%.</p>
+            <p><strong>Key Techniques:</strong> Excel dashboard creation, data visualization, KPI analysis.</p>
+            <p><strong>Impact:</strong> Enhanced customer service efficiency, significantly lowering abandonment rates.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Profitability Analysis:</strong></div>
+            <p>Conducted regression analysis on over 11,000 car models, increasing profitability through dynamic Excel dashboards.</p>
+            <p><strong>Key Techniques:</strong> Regression analysis, data modeling, Excel dashboards.</p>
+            <p><strong>Impact:</strong> Improved strategic decision-making for pricing and sales strategies.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Risk Management Insights:</strong></div>
+            <p>Performed exploratory data analysis (EDA) on bank user data using Python, identifying key factors influencing loan default.</p>
+            <p><strong>Key Techniques:</strong> Python (Pandas, NumPy), EDA, statistical analysis.</p>
+            <p><strong>Impact:</strong> Informed risk management strategies by identifying critical factors affecting loan defaults.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Movie Success Factors:</strong></div>
+            <p>Analyzed a large movie database, performing data cleaning and advanced Excel analysis, creating reports and visualizations for strategic decision-making.</p>
+            <p><strong>Key Techniques:</strong> Data cleaning, advanced Excel, data visualization.</p>
+            <p><strong>Impact:</strong> Provided actionable insights for improving movie production and marketing strategies.</p>
+          </div>
+        </div>
+                 <!-- Experience Card: PsyLiq -->
+        <div class="experience-card" data-tilt>
+          <h3>Data Analytics Intern, PsyLiq (Oct 2023 - March 2024)</h3>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Employee Retention Analysis:</strong></div>
+            <p>Investigated retention rates for 4410 employees, exploring relationships between variables such as happiness, salary, and job satisfaction using Power BI, SQL, and Excel.</p>
+            <p><strong>Key Techniques:</strong> Power BI, SQL, Excel, data visualization.</p>
+            <p><strong>Impact:</strong> Enhanced understanding of employee retention factors, aiding HR decision-making.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Visualization and Insights:</strong></div>
+            <p>Conducted analysis on employee data for 3001 employees, generating insights and visualizations using SQL, Power BI, and Python.</p>
+            <p><strong>Key Techniques:</strong> SQL queries, Power BI, Python.</p>
+            <p><strong>Impact:</strong> Provided data-driven insights for workforce planning and management.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Stock Prediction Model:</strong></div>
+            <p>Developed a stock prediction model using the Long Short-Term Memory (LSTM) algorithm in Python, forecasting stock prices based on historical data from HAL.</p>
+            <p><strong>Key Techniques:</strong> Python (LSTM, TensorFlow/Keras), data preprocessing, time series analysis.</p>
+            <p><strong>Impact:</strong> Improved stock price forecasting accuracy, supporting investment strategies.</p>
+          </div>
+        </div>
+
+        <!-- Experience Card: MedTourEasy -->
+        <div class="experience-card" data-tilt>
+          <h3>Data Analytics Intern, MedTourEasy (Sep 2023 - Oct 2023)</h3>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Handedness Analysis:</strong></div>
+            <p>Analyzed extensive datasets on cognitive and motor skill variations associated with handedness using Python programming and machine learning techniques, leading to the discovery of critical insights.</p>
+            <p><strong>Key Techniques:</strong> Python (Pandas, Scikit-learn), machine learning, data analysis.</p>
+            <p><strong>Impact:</strong> Uncovered critical insights into cognitive and motor skill variations, contributing to academic research.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Age Difference Analysis:</strong></div>
+            <p>Leveraged machine learning algorithms to process and interpret data, revealing a significant 5.5-year difference in average ages between right-handed and left-handed individuals.</p>
+            <p><strong>Key Techniques:</strong> Machine learning (classification, regression), data preprocessing.</p>
+            <p><strong>Impact:</strong> Provided new insights into lifespan differences based on handedness, influencing further research and studies.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title"><strong>Longevity and Handedness Trends:</strong></div>
+            <p>Contributed to the identification of critical trends and patterns in human longevity and handedness dynamics through expertise in statistical analysis and machine learning methodologies.</p>
+            <p><strong>Key Techniques:</strong> Statistical analysis, machine learning, data visualization.</p>
+            <p><strong>Impact:</strong> Enhanced understanding of human longevity and handedness dynamics, informing strategic decisions in healthcare and research.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card" data-tilt>
+          <div class="project-title">IMPROVED CONVOLUTIONAL NEURAL NETWORK BASED ON GUIDED FILTER FOR GLAUCOMA DETECTION</div>
+          <ul>
+            <li>This project focuses on accurate glaucoma detection using retinal fundus images by calculating the Cup-to-Disc Ratio (CDR).</li>
+            <li>Utilizes image enhancement techniques with guided filtering to improve image quality, preserving edges while reducing noise.</li>
+            <li>Employs advanced deep learning models including U-Net and VGG-16 for precise segmentation and classification of optic disc and cup.</li>
+            <li>Various activation functions (Sigmoid, Relu, TanH, ELU) were experimented to optimize classification accuracy.</li>
+            <li>The addition of guided filtering improved model performance remarkably, achieving accuracy of up to 99.68% with TanH activation.</li>
+            <li>The system was trained and tested on the DRISHTI-GS dataset, including images labeled by specialists for glaucoma diagnosis.</li>
+            <li>Future scope includes integrating additional image enhancement techniques and applying the model to broader datasets for improved reliability.</li>
+          </ul>
+        </div>
+        <div class="project-card" data-tilt>
+          <div class="project-title">EMOTIONAL FACE RECOGNITION SYSTEM USING PYTHON</div>
+          <ul>
+            <li>Developed a real-time emotion detection system with machine learning and camera input for live analysis.</li>
+            <li>Implemented face detection using OpenCV's Haar cascade classifiers.</li>
+            <li>Trained deep CNN on facial expression datasets to classify seven emotions.</li>
+            <li>Preprocessed images for model input and integrated audio feedback per emotion detected.</li>
+            <li>Used TensorFlow, Keras, OpenCV, Numpy; system applicable for healthcare, smart devices, accessibility.</li>
+          </ul>
+        </div>
+        <div class="project-card" data-tilt>
+          <div class="project-title">QUADRIPLEGICS WHEELCHAIR CONTROL BY HEAD MOTION USING ACCELEROMETER</div>
+          <ul>
+            <li>Developed a wheelchair control system for quadriplegic patients using head motion detected by MPU-6050 accelerometer.</li>
+            <li>Used Arduino Uno, NRF24L01 RF modules, MPU-6050 sensor, and L298N motor drivers for wireless control.</li>
+            <li>Implemented safety features for auto-stop on unsafe elevation.</li>
+            <li>Wireless communication via NRF24L01, sensor fusion for motion detection.</li>
+            <li>Prototype increases independence; future scope includes miniaturization and further enhancements.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" data-aos="fade-up">
+      <h2>Certificates</h2>
+      <div class="certificates-container">
+        <div class="certificate-card" data-tilt>
+          <div class="certificate-title">Google Data Analytics Professional Certificate (Google)</div>
+          <p>Developed expertise in cleaning, organizing, and preparing data for analysis.</p>
+          <p>Acquired proficiency in SQL for data management and analysis.</p>
+          <p>Gained skills in creating and sharing compelling data visualizations using Tableau and R.</p>
+        </div>
+        <div class="certificate-card" data-tilt>
+          <div class="certificate-title">Python for Data Science, AI & Development (IBM)</div>
+          <p>Mastered Python programming for data science, including the use of libraries like Pandas and NumPy.</p>
+          <p>Learned to implement basic AI and machine learning algorithms.</p>
+          <p>Developed skills in writing efficient and scalable Python code for various data analysis tasks.</p>
+        </div>
+        <div class="certificate-card" data-tilt>
+          <div class="certificate-title">Programming for Everybody (University of Michigan)</div>
+          <p>Gained foundational knowledge of Python syntax and core programming concepts.</p>
+          <p>Learned to utilize basic data structures such as lists, dictionaries, and tuples.</p>
+          <p>Acquired the ability to write Python programs to solve simple computational problems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item" title="SQL" data-tilt>
+          <img src="images/sql.png" alt="SQL logo" />
+          <span>SQL</span>
+        </div>
+        <div class="skill-item" title="Power BI" data-tilt>
+          <img src="images/power-bi.png" alt="Power BI logo" />
+          <span>Power BI</span>
+        </div>
+        <div class="skill-item" title="Python" data-tilt>
+          <img src="images/python.png" alt="Python logo" />
+          <span>Python</span>
+        </div>
+        <div class="skill-item" title="Excel" data-tilt>
+          <img src="images/excel.png" alt="Excel logo" />
+          <span>Excel</span>
+        </div>
+        <div class="skill-item" title="Tableau" data-tilt>
+          <img src="images/tableau.png" alt="Tableau logo" />
+          <span>Tableau</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+      <h2>Get in Touch</h2>
+      <form action="mailto:uie.19bec1078@gmail.com" method="GET" enctype="text/plain" onsubmit="return validateForm()" class="contact-form">
+        <div class="form-left">
+          <label for="message">Message:</label>
+          <textarea id="message" name="body" rows="8" required placeholder="Write your message here..."></textarea>
+        </div>
+        <div class="form-right">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="from" required placeholder="Your email" />
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required placeholder="Subject" />
+        </div>
+        <div class="form-bottom">
+          <input type="submit" value="Send Email" />
+        </div>
+      </form>
+    </section>
+
+    <!-- Socials Section -->
+    <section id="socials" data-aos="fade-up">
+      <h2>Connect with Me</h2>
+      <div class="social-icons">
+          <a
+          href="https://github.com/sushassassin"
+          target="_blank"
+          rel="noopener"
+          class="social-icon"
+          title="GitHub"
+          data-tilt
+          ><img src="images/github-sign.png" alt="GitHub" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sushant-kumar-367a11193/"
+          target="_blank"
+          rel="noopener"
+          class="social-icon"
+          title="LinkedIn"
+          data-tilt
+          ><img src="images/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a
+          href="https://www.instagram.com/sush.k.r_/?hl=en"
+          target="_blank"
+          rel="noopener"
+          class="social-icon"
+          title="Instagram"
+          data-tilt
+          ><img src="images/instagram.png" alt="Instagram" />
+        </a>
+      </div>
+  </main>
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sushant Kumar | Lucknow</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
