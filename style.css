@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
 
+header div { 
+  position: relative; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
 /* RESET & BASE */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -63,6 +69,14 @@ section:hover { box-shadow: 0 10px 25px rgba(0,122,204,0.18); }
   box-shadow: 0 2px 7px rgba(0,122,204,0.07);
 }
 .subexp-title { color: #145286; font-size: 1.14rem; font-weight: 700; margin-bottom: 5px; }
+.experience-container {
+  display: flex; 
+  flex-direction: column; 
+  gap: 25px; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
+
 
 /* ABOUT */
 .about-profile { display: flex; align-items: center; gap: 48px; padding: 48px 0; justify-content: center; }
@@ -149,6 +163,17 @@ body.dark-mode .skill-item { background: #2a2a2a; }
 body.dark-mode .skill-item span { color: #90b6e2; }
 body.dark-mode .dark-mode-toggle { background: #333; }
 body.dark-mode #searchProjects { background: #333; color: #e5e5e5; border-color: #4da8ff; }
+body.dark-mode .language-card { 
+  background: #2a2a2a; 
+  border-color: #4da8ff; 
+}
+body.dark-mode .lang-level { 
+  color: #d0d0d0; 
+}
+body.dark-mode .hero-pic { 
+  border-color: #4da8ff; 
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -254,3 +279,115 @@ body.dark-mode #searchProjects { background: #333; color: #e5e5e5; border-color:
   box-shadow: 0 6px 20px rgba(0,122,204,0.12) !important;
   border-radius: 16px !important; border: 2px solid #90b6e2 !important;
 } 
+/* PAGE NAVIGATION SYSTEM */
+.page-section { display: none; padding: 40px 60px; }
+.page-section.active { display: block; }
+
+/* HERO HOME SECTION */
+.hero-content { 
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; 
+  text-align: center; max-width: 1000px; margin: 0 auto;
+}
+.hero-pic { 
+  width: 380px; height: 380px; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0,122,204,0.3); border: 8px solid #23c9e3;
+}
+.hero-text h1 { font-size: 4.2rem; margin-bottom: 20px; }
+.hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.hero-buttons a {
+  padding: 15px 35px; background: #007acc; color: white; text-decoration: none;
+  border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s;
+}
+.hero-buttons a:hover { background: #005a9c; transform: translateY(-3px); }
+
+/* TAB NAVIGATION */
+.tab-nav {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  margin: 30px auto; max-width: 1000px; padding: 20px;
+  background: rgba(255,255,255,0.9); border-radius: 25px; box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+.tab-nav.dark-mode { background: rgba(26,26,26,0.9); }
+.nav-btn {
+  padding: 12px 24px; background: none; border: 2px solid #90b6e2; 
+  border-radius: 25px; color: #007acc; font-weight: 600; cursor: pointer;
+  transition: all 0.3s; font-size: 1rem; font-family: 'Montserrat', sans-serif;
+}
+.nav-btn:hover { background: #007acc; color: white; transform: translateY(-2px); }
+.nav-btn.active { 
+  background: #007acc; color: white; box-shadow: 0 5px 20px rgba(0,122,204,0.4);
+}
+
+/* LANGUAGES SECTION */
+.languages-grid { 
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 25px; margin-top: 30px; 
+}
+.language-card {
+  background: white; border: 2px solid #90b6e2; border-radius: 16px;
+  padding: 30px 20px; text-align: center; box-shadow: 0 6px 20px rgba(0,122,204,0.1);
+  transition: all 0.3s;
+}
+.language-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,122,204,0.2); }
+.lang-icon { font-size: 4rem; margin-bottom: 15px; }
+.lang-name { font-size: 1.4rem; font-weight: 700; color: #007acc; margin-bottom: 5px; }
+.lang-level { color: #666; font-size: 1.1rem; }
+
+/* CERTIFICATE BUTTONS */
+.view-all-btn, .back-btn {
+  padding: 12px 30px; background: #007acc; color: white; border: none;
+  border-radius: 25px; font-weight: 700; cursor: pointer; font-size: 1.1rem;
+  transition: all 0.3s;
+}
+.view-all-btn:hover, .back-btn:hover { background: #005a9c; transform: translateY(-2px); }
+.back-btn { margin-bottom: 30px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; gap: 40px; }
+  .hero-pic { width: 280px; height: 280px; }
+  .tab-nav { flex-direction: column; align-items: center; gap: 8px; }
+}
+@media (max-width: 768px) {
+  .page-section { padding: 20px; }
+  .hero-text h1 { font-size: 2.8rem; }
+}
+/* Certificate Cards */
+.cert-preview {
+  color: #666; font-size: 1rem; margin: 15px 0; font-style: italic;
+}
+.view-pdf-btn {
+  margin-top: 15px; padding: 8px 20px; background: #28a745; 
+  color: white; border: none; border-radius: 20px; cursor: pointer;
+  font-weight: 600; transition: all 0.3s;
+}
+.view-pdf-btn:hover { background: #218838; transform: translateY(-2px); }
+
+/* PDF Gallery */
+.pdf-gallery { padding: 20px 0; }
+.pdf-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px; max-width: 1200px; margin: 0 auto;
+}
+.pdf-item {
+  background: white; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,122,204,0.15);
+  transition: all 0.3s;
+}
+.pdf-item:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,122,204,0.25); }
+.pdf-thumbnail {
+  width: 100%; height: 200px; background: #f8f9fa;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4rem; color: #ccc;
+}
+.pdf-title { padding: 20px; font-weight: 700; color: #007acc; }
+.pdf-download {
+  display: block; margin: 0 20px 20px; padding: 12px 24px;
+  background: #007acc; color: white; text-decoration: none;
+  border-radius: 25px; text-align: center; font-weight: 600;
+}
+.pdf-download:hover { background: #005a9c; }
+
+/* Dark mode */
+body.dark-mode .pdf-item { background: #2a2a2a; }
+body.dark-mode .pdf-title { color: #4da8ff; }
+body.dark-mode .pdf-thumbnail { background: #333; color: #666; }
