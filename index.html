@@ -4,17 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sushant Kumar Portfolio</title>
-
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- AOS Animate On Scroll CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- External JS libraries -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 
@@ -22,51 +17,84 @@
   <header>
     <div>
       <h1>Sushant Kumar</h1>
-      <p>Data Analyst Unveiling Insights through Data | Python | SQL | Data Visualization for 2 years</p>
+      <p>Data Analyst | Python | SQL | Data Visualization | 2+ Years Experience</p>
       <label class="dark-mode-toggle" for="toggleDarkMode">
-      <input type="checkbox" id="toggleDarkMode" />
-      <span>Dark Mode</span>
+        <input type="checkbox" id="toggleDarkMode" />
+        <span>Dark Mode</span>
       </label>
     </div>
   </header>
 
   <!-- Navigation -->
-  <input type="text" id="searchProjects" placeholder="Search projects..." />
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#experience">Professional Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Get in Touch</a>
+  <nav id="main-nav" class="tab-nav">
+    <button class="nav-btn active" data-section="home">Home</button>
+    <button class="nav-btn" data-section="about">About</button>
+    <button class="nav-btn" data-section="experience">Experience</button>
+    <button class="nav-btn" data-section="projects">Projects</button>
+    <button class="nav-btn" data-section="languages">Languages</button>
+    <button class="nav-btn" data-section="certificates">Certificates</button>
+    <button class="nav-btn" data-section="skills">Skills</button>
+    <button class="nav-btn" data-section="socials">Socials</button>
+    <button class="nav-btn" data-section="contact">Contact</button>
   </nav>
 
   <!-- Main content -->
   <main id="container">
-
-    <!-- Intro Section -->
-    <section id="intro" data-aos="fade-up">
-      <p>
-        In an era where data drives decision-making, the power of analytics lies in its ability to transform raw information into actionable insights. As a data analyst, I am passionate about uncovering patterns, trends, and stories hidden within data. My expertise in Python, SQL, and statistical analysis allows me to not only interpret complex datasets but also to create dynamic visualizations that support strategic business decisions. Through my experience with diverse projects and internships, I have honed my skills in data cleaning, exploratory analysis, and predictive modeling, always aiming to provide valuable insights that fuel growth and innovation.
-      </p>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="about-profile" data-aos="fade-up">
-      <div class="about-image">
-        <img src="images/Me.JPEG" alt="Sushant Kumar" class="about-pic" />
-      </div>
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Hello, I'm Sushant Kumar, a passionate data analyst based in Mülheim (Germany). With over a year of experience in Python, SQL, and Excel, I excel at turning complex data into actionable insights.</p>
-        <p>During my internships at Trainity, PsyLiq, and MedTourEasy, I created dynamic dashboards, conducted regression analyses, and performed exploratory data analysis. My work helped reduce call abandonment rates for ABC Insurance and boost profitability for car model analysis projects.</p>
-        <p>Certified in Google Data Analytics and Python for Data Science and AI, I am dedicated to continuous learning and leveraging data to drive organizational success.</p>
-        <p>Explore my projects and professional journey on this website, and feel free to reach out for collaborations or opportunities.</p>
+    <!-- Home -->
+    <section id="home" class="page-section active">
+      <div class="hero-content">
+        <img src="images/Me.JPEG" alt="Sushant Kumar" class="hero-pic" />
+        <div class="hero-text">
+          <h1>Sushant Kumar</h1>
+          <p>Data Analyst | Python | SQL | Data Visualization | 2+ Years Experience</p>
+          <div class="hero-buttons">
+            <a class="nav-trigger" data-section="projects">View Projects</a>
+            <a class="nav-trigger" data-section="contact">Get In Touch</a>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Languages -->
+    <section id="languages" class="page-section">
+      <h2>Languages</h2>
+      <div class="languages-grid">
+        <div class="language-card" data-tilt>
+          <div class="lang-icon">🇩🇪</div>
+          <div class="lang-name">German</div>
+          <div class="lang-level">B2 (Professional)</div>
+        </div>
+        <div class="language-card" data-tilt>
+          <div class="lang-icon">EN</div>
+          <div class="lang-name">English</div>
+          <div class="lang-level">C1 (Fluent)</div>
+        </div>
+        <div class="language-card" data-tilt>
+          <div class="lang-icon">🇮🇳</div>
+          <div class="lang-name">Hindi</div>
+          <div class="lang-level">Native</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About (COMBINED & FIXED) -->
+    <section id="about" class="page-section">
+      <h2>About Me</h2>
+      <div class="about-profile">
+        <div class="about-image">
+          <img src="images/Me.JPEG" alt="Sushant Kumar" class="about-pic" />
+        </div>
+        <div class="about-text">
+          <p>I'm Sushant Kumar, a passionate data analyst based in Mülheim (Germany). With 2+ years experience in Python, SQL, Excel, I excel at turning complex data into actionable insights.</p>
+          <p>During internships at Trainity, PsyLiq, and MedTourEasy, I created dynamic dashboards, conducted regression analyses, and performed EDA. Reduced call abandonment rates 30%→10% for ABC Insurance.</p>
+          <p>Certified in Google Data Analytics & Python for Data Science. Explore my work and reach out for opportunities!</p>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Professional Experience Section -->
-    <section id="experience" data-aos="fade-up">
+    <section id="experience" class="page-section">
       <h2>Professional Experience</h2>
       <div class="experience-container">
 
@@ -149,7 +177,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" data-aos="fade-up">
+    <section id="projects" class="page-section">
       <h2>Projects</h2>
       <div class="projects-container">
         <div class="project-card" data-tilt>
@@ -188,32 +216,45 @@
     </section>
 
     <!-- Certificates Section -->
-    <section id="certificates" data-aos="fade-up">
-      <h2>Certificates</h2>
-      <div class="certificates-container">
-        <div class="certificate-card" data-tilt>
-          <div class="certificate-title">Google Data Analytics Professional Certificate (Google)</div>
-          <p>Developed expertise in cleaning, organizing, and preparing data for analysis.</p>
-          <p>Acquired proficiency in SQL for data management and analysis.</p>
-          <p>Gained skills in creating and sharing compelling data visualizations using Tableau and R.</p>
-        </div>
-        <div class="certificate-card" data-tilt>
-          <div class="certificate-title">Python for Data Science, AI & Development (IBM)</div>
-          <p>Mastered Python programming for data science, including the use of libraries like Pandas and NumPy.</p>
-          <p>Learned to implement basic AI and machine learning algorithms.</p>
-          <p>Developed skills in writing efficient and scalable Python code for various data analysis tasks.</p>
-        </div>
-        <div class="certificate-card" data-tilt>
-          <div class="certificate-title">Programming for Everybody (University of Michigan)</div>
-          <p>Gained foundational knowledge of Python syntax and core programming concepts.</p>
-          <p>Learned to utilize basic data structures such as lists, dictionaries, and tuples.</p>
-          <p>Acquired the ability to write Python programs to solve simple computational problems.</p>
-        </div>
-      </div>
-    </section>
+<section id="certificates" class="page-section">
+  <h2>Certificates</h2>
+  <div style="text-align:center; margin-bottom: 30px;">
+    <button id="viewAllCerts" class="view-all-btn">View All Certificates →</button>
+  </div>
+  <div class="certificates-container">
+    <div class="certificate-card" data-tilt data-pdf="certificates/google-data-analytics.pdf">
+      <div class="certificate-title">Google Data Analytics Professional Certificate (Google)</div>
+      <div class="cert-preview">📊 Data cleaning, SQL, Tableau, R</div>
+      <button class="view-pdf-btn">View Certificate</button>
+    </div>
+    
+    <div class="certificate-card" data-tilt data-pdf="certificates/python-data-science.pdf">
+      <div class="certificate-title">Python for Data Science, AI & Development (IBM)</div>
+      <div class="cert-preview">🐍 Pandas, NumPy, ML algorithms</div>
+      <button class="view-pdf-btn">View Certificate</button>
+    </div>
+    
+    <div class="certificate-card" data-tilt data-pdf="certificates/programming-everybody.pdf">
+      <div class="certificate-title">Programming for Everybody (University of Michigan)</div>
+      <div class="cert-preview">💻 Python fundamentals</div>
+      <button class="view-pdf-btn">View Certificate</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Certificate Gallery (Full Screen) -->
+<section id="cert-gallery" class="page-section">
+  <button id="backToCerts" class="back-btn">← Back to Certificates</button>
+  <div class="pdf-gallery">
+    <div class="pdf-grid" id="pdfGrid">
+      <!-- PDFs will be loaded here by JavaScript -->
+    </div>
+  </div>
+</section>
 
     <!-- Skills Section -->
-    <section id="skills" data-aos="fade-up">
+    <section id="skills" class="page-section">
       <h2>Skills</h2>
       <div class="skills-grid">
         <div class="skill-item" title="SQL" data-tilt>
@@ -240,7 +281,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" data-aos="fade-up">
+    <section id="contact" class="page-section">
       <h2>Get in Touch</h2>
       <form action="mailto:uie.19bec1078@gmail.com" method="GET" enctype="text/plain" onsubmit="return validateForm()" class="contact-form">
         <div class="form-left">
@@ -260,7 +301,7 @@
     </section>
 
     <!-- Socials Section -->
-    <section id="socials" data-aos="fade-up">
+   <section id="socials" class="page-section">
       <h2>Connect with Me</h2>
       <div class="social-icons">
           <a
@@ -293,12 +334,8 @@
       </div>
   </main>
 
-<button id="backToTop" aria-label="Back to top">↑</button>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Sushant Kumar | Mülheim</p>
-  </footer>
+ <button id="backToTop" aria-label="Back to top">↑</button>
+<footer><p>&copy; 2026 Sushant Kumar | Mülheim</p></footer>
 
   <!-- External JS -->
   <script src="script.js"></script>
