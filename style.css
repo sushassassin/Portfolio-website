@@ -204,81 +204,79 @@ body.dark-mode .hero-pic {
   .skill-item span { font-size: 1rem; }
 }
 /* SKILLS - Fixed Logo Size */
-.skill-item {
+#skills .skill-item {
   width: 90px; height: 120px; /* Smaller container */
 }
-.skill-item img {
-  width: 45px !important; height: 45px !important; /* Fixed size */
+#skills .skill-item img {
+  width: 45px; height: 45px; /* Fixed size */
   margin-bottom: 10px;
 }
 @media (max-width: 600px) {
-  .skill-item { width: 80px; height: 110px; }
-  .skill-item img { width: 40px !important; height: 40px !important; }
+  #skills .skill-item { width: 80px; height: 110px; }
+  #skills .skill-item img { width: 40px; height: 40px; }
 }
 
 /* SOCIAL ICONS - Fixed Size */
-.social-icon {
-  width: 55px !important; height: 55px !important; /* Consistent */
+#socials .social-icon {
+  width: 55px; height: 55px; /* Consistent */
   padding: 8px;
 }
-.social-icon img {
+#socials .social-icon img {
   width: 100%; height: 100%; object-fit: contain;
 }
 @media (max-width: 480px) {
-  .social-icon { width: 45px !important; height: 45px !important; }
+  #socials .social-icon { width: 45px; height: 45px; }
 }
 
-/* PROJECTS - Forced Tight Grid */
-/* PROJECTS - BULLETPROOF GRID */
-#projects {
-  padding: 20px !important; margin-bottom: 30px !important;
-}
-#projects > .projects-container {  /* Direct child */
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
-  gap: 20px !important;
-  justify-content: center !important;
-  width: 100% !important; max-width: 1200px !important;
-  margin: 0 auto !important; padding: 0 10px !important;
-}
-#projects .project-card {
-  max-width: 100% !important; width: 100% !important;
-  min-height: 440px !important; margin: 0 !important;
-  padding: 28px 24px !important; box-sizing: border-box !important;
+/* PROJECTS & CERTIFICATES - Layout Definitions */
+#projects.page-section, #certificates.page-section {
+  padding: 20px; margin-bottom: 30px;
 }
 
-/* Override ALL conflicting styles */
-.projects-container *, .projects-container > * {
-  max-width: none !important; flex: none !important;
-  display: block !important; /* Kill flex conflicts */
+#projects .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  width: 100%; max-width: 1200px;
+  margin: 0 auto; padding: 0 10px;
 }
 
+#projects .projects-container .project-card {
+  max-width: 100%; width: 100%;
+  min-height: 440px; margin: 0;
+  padding: 28px 24px; box-sizing: border-box;
+}
 
-/* CERTIFICATES - Forced Tight Grid */
+/* Override flex styles specifically within projects-container */
+#projects .projects-container .project-card *, 
+#projects .projects-container .project-card > * {
+  max-width: none; flex: none; display: block;
+}
+
 #certificates .certificates-container {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-  gap: 20px !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   justify-items: center; justify-content: center;
-  max-width: 100% !important; margin: 0 !important; padding: 0 !important;
-}
-#certificates .certificate-card {
-  width: 100%; max-width: 340px !important;
-  min-height: 320px; margin: 0 !important; padding: 24px !important;
+  max-width: 100%; margin: 0; padding: 0;
 }
 
-/* Kill ALL inherited spacing */
-#projects, #certificates {
-  padding: 20px !important; margin-bottom: 30px !important;
+#certificates .certificates-container .certificate-card {
+  width: 100%; max-width: 340px;
+  min-height: 320px; margin: 0; padding: 24px;
 }
+
+/* Reset inner sections if present */
 #projects section, #certificates section {
-  padding: 0 !important; margin: 0 !important; box-shadow: none !important;
+  padding: 0; margin: 0; box-shadow: none;
 }
-.project-card, .certificate-card {
-  display: flex !important; flex-direction: column !important;
-  box-shadow: 0 6px 20px rgba(0,122,204,0.12) !important;
-  border-radius: 16px !important; border: 2px solid #90b6e2 !important;
-} 
+
+#projects .project-card, #certificates .certificate-card {
+  display: flex; flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0,122,204,0.12);
+  border-radius: 16px; border: 2px solid #90b6e2;
+}
 /* PAGE NAVIGATION SYSTEM */
 .page-section { display: none; padding: 40px 60px; }
 .page-section.active { display: block; }
