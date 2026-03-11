@@ -6,48 +6,91 @@ document.addEventListener("DOMContentLoaded", () => {
     
     navBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
+        if(btn.tagName === 'A' && btn.getAttribute('href')?.startsWith('http')) return;
         e.preventDefault();
         const targetSection = btn.dataset.section;
+        if (!targetSection) return;
         
         // Update active nav button
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        if (btn.classList.contains('nav-btn')) {
+          btn.classList.add('active');
+        } else {
+          const tabBtn = document.querySelector(`.nav-btn[data-section="${targetSection}"]`);
+          if (tabBtn) tabBtn.classList.add('active');
+        }
         
         // Hide all sections
         sections.forEach(s => s.classList.remove('active'));
         
         // Show target section
-        document.getElementById(targetSection).classList.add('active');
+        const targetEl = document.getElementById(targetSection);
+        if (targetEl) targetEl.classList.add('active');
         
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
   }
 
-  // Certificate functionality (WORKS WITHOUT PDFs for now)
+  // Certificate functionality
   function initCertificates() {
     // View All Certificates button
-    document.getElementById('viewAllCerts')?.addEventListener('click', () => {
-      loadCertificateGallery();
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('cert-gallery').classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    const viewAllBtn = document.getElementById('viewAllCerts');
+    if (viewAllBtn) {
+      viewAllBtn.addEventListener('click', () => {
+        loadCertificateGallery();
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+        document.getElementById('cert-gallery').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     // Back button
-    document.getElementById('backToCerts')?.addEventListener('click', () => {
-      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-      document.getElementById('certificates').classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    const backBtn = document.getElementById('backToCerts');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+        const certBtn = document.querySelector('.nav-btn[data-section="certificates"]');
+        if (certBtn) certBtn.classList.add('active');
+        document.getElementById('certificates').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+    
+    // Individual PDF buttons in preview
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('view-pdf-btn')) {
+        const certCard = e.target.closest('.certificate-card');
+        if (certCard && certCard.dataset.pdf) {
+          window.open(certCard.dataset.pdf, '_blank');
+        }
+      }
     });
   }
 
   function loadCertificateGallery() {
     const grid = document.getElementById('pdfGrid');
+    if (!grid) return;
+    
     const certificates = [
-      { title: 'Google Data Analytics Professional Certificate', file: 'certificates/google-data-analytics.pdf' },
-      { title: 'Python for Data Science, AI & Development (IBM)', file: 'certificates/python-data-science.pdf' },
-      { title: 'Programming for Everybody (University of Michigan)', file: 'certificates/programming-everybody.pdf' }
+      { title: 'Google Data Analytics', file: 'certificates/Google Data analytics.pdf' },
+      { title: 'Python for Data Science (IBM)', file: 'certificates/IBM Python.pdf' },
+      { title: 'Programming Fundamentals', file: 'certificates/Programming Fundamentals.pdf' },
+      { title: 'Coursera COVID', file: 'certificates/Coursera COVID.pdf' },
+      { title: 'Coursera English', file: 'certificates/Coursera English.pdf' },
+      { title: 'Coursera HTML', file: 'certificates/Coursera HTMl.pdf' },
+      { title: 'Coursera Psychology', file: 'certificates/Coursera Psychology.pdf' },
+      { title: 'Coursera Python', file: 'certificates/Coursera Python.pdf' },
+      { title: 'Coursera Python 2', file: 'certificates/Coursera Python 2.pdf' },
+      { title: 'Coursera JavaScript Basics', file: 'certificates/Coursera javascript basics.pdf' },
+      { title: 'HTML', file: 'certificates/HTMl.pdf' },
+      { title: 'Public Speaking', file: 'certificates/Public speaking.pdf' },
+      { title: 'Participant Certificate', file: 'certificates/SUSHANT-KUMAR-19BEC1078-Participant-Certificate.pdf' },
+      { title: 'Sensors and Actuators', file: 'certificates/Sensors and Actuators.jpg' },
+      { title: 'Techinvent Anchoring', file: 'certificates/Techinvent anchoring.pdf' },
+      { title: 'Uber Participation', file: 'certificates/participation-certificate Uber.pdf' },
+      { title: 'UAV Workshop', file: 'certificates/Introductory workshop on Un-manned Arial Vehicals (UAVs).pdf' }
     ];
 
     grid.innerHTML = certificates.map(cert => `
@@ -58,24 +101,37 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `).join('');
 
-    // Re-init tilt on new elements
-    VanillaTilt.init(document.querySelectorAll('.pdf-item[data-tilt]'));
+    if (typeof VanillaTilt !== 'undefined' && VanillaTilt.init) {
+      try {
+        VanillaTilt.init(document.querySelectorAll('.pdf-item[data-tilt]'), 
+          window.innerWidth > 768 ? 
+            { max: 10, speed: 400, glare: true, "max-glare": 0.18, scale: 1.05 } :
+            { max: 5, glare: false, scale: 1.02 }
+        );
+      } catch (e) {
+        console.warn("VanillaTilt initialization failed for gallery items:", e);
+      }
+    }
   }
 
-  // Initialize everything
+  // Initialize components
   initNavigation();
   initCertificates();
   
   // AOS animations
-  AOS.init();
+  if (typeof AOS !== 'undefined') {
+    AOS.init();
+  }
   
   // VanillaTilt
-  VanillaTilt.init(
-    document.querySelectorAll("[data-tilt]"),
-    window.innerWidth > 768 ? 
-      { max: 10, speed: 400, glare: true, "max-glare": 0.18, scale: 1.05 } :
-      { max: 5, glare: false, scale: 1.02 }
-  );
+  if (typeof VanillaTilt !== 'undefined') {
+    VanillaTilt.init(
+      document.querySelectorAll("[data-tilt]"),
+      window.innerWidth > 768 ? 
+        { max: 10, speed: 400, glare: true, "max-glare": 0.18, scale: 1.05 } :
+        { max: 5, glare: false, scale: 1.02 }
+    );
+  }
 
   // Dark mode
   const darkModeToggle = document.getElementById('toggleDarkMode');
@@ -132,113 +188,4 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Navigation
-  document.querySelectorAll('.nav-btn, .nav-trigger').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = btn.dataset.section;
-      
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-      document.getElementById(target).classList.add('active');
-      
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-
-  // 2. CERTIFICATE BUTTONS (THIS FIXES YOUR PROBLEM)
-  document.getElementById('viewAllCerts').addEventListener('click', () => {
-    // Hide all sections first
-    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-    
-    // Load gallery and show it
-    loadCertificateGallery();
-    document.getElementById('cert-gallery').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  document.getElementById('backToCerts').addEventListener('click', () => {
-    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-    document.getElementById('certificates').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Individual PDF buttons
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('view-pdf-btn')) {
-      const pdfUrl = e.target.closest('.certificate-card').dataset.pdf;
-      window.open(pdfUrl, '_blank');
-    }
-  });
-
-function loadCertificateGallery() {
-  const grid = document.getElementById('pdfGrid');
-  const certificates = [
-    { title: 'Google Data Analytics', file: 'certificates/Google_Data_Analytics.pdf' },
-    { title: 'Python for Data Science IBM', file: 'certificates/Python_Data_Science_IBM.pdf' },
-    { title: 'Programming Fundamentals', file: 'certificates/Programming_Fundamentals.pdf' },
-    { title: 'Introduction Web Analysis', file: 'certificates/Introduction_Web_Analysis.pdf' },
-    { title: 'Introduction HTML', file: 'certificates/Introduction_HTML.pdf' },
-    { title: 'HTML Public Speaking', file: 'certificates/HTML_Public_Speaking.pdf' },
-    { title: 'HTML Participant Certificate', file: 'certificates/HTML_Participant.pdf' },
-    { title: 'Coursera COVID', file: 'certificates/Coursera_COVID.pdf' },
-    { title: 'Coursera English 1', file: 'certificates/Coursera_English_1.pdf' },
-    { title: 'Coursera English 2', file: 'certificates/Coursera_English_2.pdf' },
-    { title: 'Coursera JavaScript Basics', file: 'certificates/Coursera_JavaScript_Basics.pdf' },
-    { title: 'Coursera Kaggle Python', file: 'certificates/Coursera_Kaggle_Python.pdf' },
-    { title: 'Coursera Psychology', file: 'certificates/Coursera_Psychology.pdf' },
-    { title: 'Coursera Python 2', file: 'certificates/Coursera_Python_2.pdf' },
-    { title: 'Coursera Python FAQ', file: 'certificates/Coursera_Python_FAQ.pdf' },
-    { title: 'Coursera SQL', file: 'certificates/Coursera_SQL.pdf' },
-    { title: 'Sushant Kumar JavaScript', file: 'certificates/Sushant_Kumar_JavaScript.pdf' }
-  ];
-
-  grid.innerHTML = certificates.map(cert => `
-    <div class="pdf-item" data-tilt>
-      <div class="pdf-thumbnail">📜</div>
-      <div class="pdf-title">${cert.title}</div>
-      <a href="${cert.file}" class="pdf-download" target="_blank">View Certificate PDF</a>
-    </div>
-  `).join('');
-
-  VanillaTilt.init(document.querySelectorAll('.pdf-item[data-tilt]'));
-}
-
-
-  // 3. AOS + Tilt
-  AOS.init();
-  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-    max: window.innerWidth > 768 ? 10 : 5,
-    speed: 400, glare: window.innerWidth > 768
-  });
-
-  // 4. Dark mode
-  const toggle = document.getElementById('toggleDarkMode');
-  if (toggle) {
-    const isDark = localStorage.getItem('darkMode') === 'true';
-    toggle.checked = isDark;
-    document.body.classList.toggle('dark-mode', isDark);
-    
-    toggle.addEventListener('change', e => {
-      document.body.classList.toggle('dark-mode', e.target.checked);
-      localStorage.setItem('darkMode', e.target.checked);
-    });
-  }
-
-  // 5. Form validation
-  window.validateForm = function() {
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    if (!email || !subject || !message || !email.includes('@')) {
-      alert('Please fill all fields with a valid email.');
-      return false;
-    }
-    return true;
-  };
 });
