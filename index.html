@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sushant Kumar — Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div>
+      <div class="header-logo">Sushant <span>Kumar</span></div>
+      <div class="header-subtitle">Data Analyst · Duisburg, Germany</div>
+    </div>
+    <div class="header-right">
+      <input type="checkbox" id="toggleDarkMode" />
+      <label for="toggleDarkMode" class="toggle-wrap">
+        <span class="toggle-label">Light Mode</span>
+        <div class="toggle-switch"></div>
+      </label>
+    </div>
+  </header>
+
+  <!-- SIDEBAR NAV -->
+  <nav id="main-nav" class="tab-nav">
+    <span class="nav-section-label">Navigation</span>
+    <button class="nav-btn active" data-section="home"><span class="nav-icon">⌂</span> Home</button>
+    <button class="nav-btn" data-section="about"><span class="nav-icon">◎</span> About</button>
+    <button class="nav-btn" data-section="experience"><span class="nav-icon">◈</span> Experience</button>
+    <button class="nav-btn" data-section="projects"><span class="nav-icon">◆</span> Projects</button>
+    <span class="nav-section-label">More</span>
+    <button class="nav-btn" data-section="languages"><span class="nav-icon">◉</span> Languages</button>
+    <button class="nav-btn" data-section="certificates"><span class="nav-icon">◎</span> Certificates</button>
+    <button class="nav-btn" data-section="skills"><span class="nav-icon">◇</span> Skills</button>
+    <button class="nav-btn" data-section="socials"><span class="nav-icon">◈</span> Socials</button>
+    <button class="nav-btn" data-section="contact"><span class="nav-icon">◆</span> Contact</button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav">
+    <button class="nav-btn active" data-section="home">Home</button>
+    <button class="nav-btn" data-section="about">About</button>
+    <button class="nav-btn" data-section="experience">Experience</button>
+    <button class="nav-btn" data-section="projects">Projects</button>
+    <button class="nav-btn" data-section="languages">Languages</button>
+    <button class="nav-btn" data-section="certificates">Certificates</button>
+    <button class="nav-btn" data-section="skills">Skills</button>
+    <button class="nav-btn" data-section="socials">Socials</button>
+    <button class="nav-btn" data-section="contact">Contact</button>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="container">
+
+    <!-- ========== HOME ========== -->
+    <section id="home" class="page-section active">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">Data Analyst · Python · SQL</div>
+          <h1 class="hero-name">Sushant Kumar</h1>
+          <div class="hero-tagline">Turning data into decisions.</div>
+          <p class="hero-desc">Data Analyst and Master's Student in Intelligent Systems Network at University of Duisburg-Essen, with 2+ years of experience in Python, SQL, and Data Visualization — based in Duisburg, Germany. I transform complex datasets into clear, actionable insights.</p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num">2+</div>
+              <div class="stat-label">Years Exp.</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">3</div>
+              <div class="stat-label">Internships</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">17</div>
+              <div class="stat-label">Certificates</div>
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <a class="btn-primary nav-trigger" data-section="projects">View Projects</a>
+            <a class="btn-secondary nav-trigger" data-section="contact">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-image-ring"></div>
+          <div class="hero-image-ring"></div>
+          <img src="images/Me.JPEG" alt="Sushant Kumar" class="hero-pic" />
+          <div class="hero-badge">
+            <div class="hero-badge-text">Currently based in</div>
+            <div class="hero-badge-val">🇩🇪 Duisburg, DE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">01 — Who I Am</span>
+        <h2>About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col">
+          <div class="about-pic-wrap">
+            <img src="images/Me.JPEG" alt="Sushant Kumar" class="about-pic" />
+            <div class="about-pic-accent"></div>
+          </div>
+          <div class="about-info-chips">
+            <div class="info-chip"><span class="info-chip-icon">📍</span> Duisburg, Germany</div>
+            <div class="info-chip"><span class="info-chip-icon">🎓</span> M.Sc. Intelligent Systems Network, University of Duisburg-Essen</div>
+            <div class="info-chip"><span class="info-chip-icon">🎓</span> B.E. ECE, Chandigarh University</div>
+            <div class="info-chip"><span class="info-chip-icon">📊</span> 2+ Years Experience</div>
+            <div class="info-chip"><span class="info-chip-icon">✉️</span> piysh345757@gmail.com</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>I'm Sushant Kumar, a passionate data analyst and Master's student in Intelligent Systems Network at the University of Duisburg-Essen, based in Duisburg (Germany). With 2+ years experience in Python, SQL, Excel, I excel at turning complex data into actionable insights.</p>
+          <p>During internships at Trainity, PsyLiq, and MedTourEasy, I created dynamic dashboards, conducted regression analyses, and performed EDA. Reduced call abandonment rates 30%→10% for ABC Insurance.</p>
+          <div class="about-highlight">
+            "Certified in Google Data Analytics & Python for Data Science. Explore my work and reach out for opportunities!"
+          </div>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">EDA</span>
+            <span class="tag">Data Viz</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">02 — Career</span>
+        <h2>Professional Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Trainity -->
+      <div class="experience-item" data-aos="fade-up">
+        <div class="exp-meta">
+          <div class="exp-date">Mar 2024 – Oct 2024</div>
+          <div class="exp-company">Trainity</div>
+        </div>
+        <div class="exp-dot"></div>
+        <div class="exp-content">
+          <h3>Data Analyst Intern</h3>
+          <div class="subexp-block">
+            <div class="subexp-title">Reduced Call Abandonment</div>
+            <p>Developed an Excel dashboard for ABC Insurance, reducing call abandonment rates from 30% to 10%.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Excel dashboard creation, data visualization, KPI analysis.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Enhanced customer service efficiency, significantly lowering abandonment rates.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title">Profitability Analysis</div>
+            <p>Conducted regression analysis on over 11,000 car models, increasing profitability through dynamic Excel dashboards.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Regression analysis, data modeling, Excel dashboards.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Improved strategic decision-making for pricing and sales strategies.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title">Risk Management Insights</div>
+            <p>Performed exploratory data analysis (EDA) on bank user data using Python, identifying key factors influencing loan default.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Python (Pandas, NumPy), EDA, statistical analysis.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Informed risk management strategies by identifying critical factors affecting loan defaults.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title">Movie Success Factors</div>
+            <p>Analyzed a large movie database, performing data cleaning and advanced Excel analysis, creating reports and visualizations for strategic decision-making.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Data cleaning, advanced Excel, data visualization.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Provided actionable insights for improving movie production and marketing strategies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PsyLiq -->
+      <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="exp-meta">
+          <div class="exp-date">Oct 2023 – Mar 2024</div>
+          <div class="exp-company">PsyLiq</div>
+        </div>
+        <div class="exp-dot"></div>
+        <div class="exp-content">
+          <h3>Data Analytics Intern</h3>
+          <div class="subexp-block">
+            <div class="subexp-title">Employee Retention Analysis</div>
+            <p>Investigated retention rates for 4410 employees, exploring relationships between variables such as happiness, salary, and job satisfaction using Power BI, SQL, and Excel.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Power BI, SQL, Excel, data visualization.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Enhanced understanding of employee retention factors, aiding HR decision-making.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title">Visualization and Insights</div>
+            <p>Conducted analysis on employee data for 3001 employees, generating insights and visualizations using SQL, Power BI, and Python.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> SQL queries, Power BI, Python.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Provided data-driven insights for workforce planning and management.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title">Stock Prediction Model</div>
+            <p>Developed a stock prediction model using the Long Short-Term Memory (LSTM) algorithm in Python, forecasting stock prices based on historical data from HAL.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Python (LSTM, TensorFlow/Keras), data preprocessing, time series analysis.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Improved stock price forecasting accuracy, supporting investment strategies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MedTourEasy -->
+      <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="exp-meta">
+          <div class="exp-date">Sep 2023 – Oct 2023</div>
+          <div class="exp-company">MedTourEasy</div>
+        </div>
+        <div class="exp-dot"></div>
+        <div class="exp-content">
+          <h3>Data Analytics Intern</h3>
+          <div class="subexp-block">
+            <div class="subexp-title">Handedness Analysis</div>
+            <p>Analyzed extensive datasets on cognitive and motor skill variations associated with handedness using Python programming and machine learning techniques, leading to the discovery of critical insights.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Python (Pandas, Scikit-learn), machine learning, data analysis.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Uncovered critical insights into cognitive and motor skill variations, contributing to academic research.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title">Age Difference Analysis</div>
+            <p>Leveraged machine learning algorithms to process and interpret data, revealing a significant 5.5-year difference in average ages between right-handed and left-handed individuals.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Machine learning (classification, regression), data preprocessing.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Provided new insights into lifespan differences based on handedness, influencing further research and studies.</p>
+          </div>
+          <div class="subexp-block">
+            <div class="subexp-title">Longevity and Handedness Trends</div>
+            <p>Contributed to the identification of critical trends and patterns in human longevity and handedness dynamics through expertise in statistical analysis and machine learning methodologies.</p>
+            <p><strong style="color:var(--text-primary)">Key Techniques:</strong> Statistical analysis, machine learning, data visualization.</p>
+            <p><strong style="color:var(--text-primary)">Impact:</strong> Enhanced understanding of human longevity and handedness dynamics, informing strategic decisions in healthcare and research.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">03 — Work</span>
+        <h2>Featured Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchProjects" placeholder="Search projects..." />
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-num">01</div>
+          <div class="project-title">Improved Convolutional Neural Network Based on Guided Filter for Glaucoma Detection</div>
+          <ul>
+            <li>Focuses on accurate glaucoma detection using retinal fundus images by calculating the Cup-to-Disc Ratio (CDR).</li>
+            <li>Utilizes image enhancement techniques with guided filtering to improve image quality, preserving edges while reducing noise.</li>
+            <li>Employs advanced deep learning models including U-Net and VGG-16 for precise segmentation and classification of optic disc and cup.</li>
+            <li>Various activation functions (Sigmoid, Relu, TanH, ELU) were experimented to optimize classification accuracy.</li>
+            <li>The addition of guided filtering improved model performance remarkably, achieving accuracy of up to 99.68% with TanH activation.</li>
+            <li>The system was trained and tested on the DRISHTI-GS dataset, including images labeled by specialists for glaucoma diagnosis.</li>
+            <li>Future scope includes integrating additional image enhancement techniques and applying the model to broader datasets for improved reliability.</li>
+          </ul>
+          <div class="tag-row" style="margin-top:20px">
+            <span class="tag">CNN</span><span class="tag">U-Net</span><span class="tag">VGG-16</span><span class="tag">Medical Imaging</span><span class="tag">Python</span>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-num">02</div>
+          <div class="project-title">Emotional Face Recognition System Using Python</div>
+          <ul>
+            <li>Developed a real-time emotion detection system with machine learning and camera input for live analysis.</li>
+            <li>Implemented face detection using OpenCV's Haar cascade classifiers.</li>
+            <li>Trained deep CNN on facial expression datasets to classify seven emotions.</li>
+            <li>Preprocessed images for model input and integrated audio feedback per emotion detected.</li>
+            <li>Used TensorFlow, Keras, OpenCV, Numpy; system applicable for healthcare, smart devices, accessibility.</li>
+          </ul>
+          <div class="tag-row" style="margin-top:20px">
+            <span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">Deep Learning</span>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-num">03</div>
+          <div class="project-title">Quadriplegics Wheelchair Control by Head Motion Using Accelerometer</div>
+          <ul>
+            <li>Developed a wheelchair control system for quadriplegic patients using head motion detected by MPU-6050 accelerometer.</li>
+            <li>Used Arduino Uno, NRF24L01 RF modules, MPU-6050 sensor, and L298N motor drivers for wireless control.</li>
+            <li>Implemented safety features for auto-stop on unsafe elevation.</li>
+            <li>Wireless communication via NRF24L01, sensor fusion for motion detection.</li>
+            <li>Prototype increases independence; future scope includes miniaturization and further enhancements.</li>
+          </ul>
+          <div class="tag-row" style="margin-top:20px">
+            <span class="tag">Arduino</span><span class="tag">IoT</span><span class="tag">Embedded Systems</span><span class="tag">Sensors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LANGUAGES ========== -->
+    <section id="languages" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">04 — Communication</span>
+        <h2>Languages</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="languages-grid">
+        <div class="language-card" data-aos="fade-up">
+          <span class="lang-icon">🇩🇪</span>
+          <div class="lang-name">German</div>
+          <div class="lang-level">B2 · Professional</div>
+        </div>
+        <div class="language-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="lang-icon" style="font-size:2.8rem;font-family:'JetBrains Mono',monospace;color:var(--cyan)">EN</span>
+          <div class="lang-name">English</div>
+          <div class="lang-level">C1 · Fluent</div>
+        </div>
+        <div class="language-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="lang-icon">🇮🇳</span>
+          <div class="lang-name">Hindi</div>
+          <div class="lang-level">Native</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CERTIFICATES ========== -->
+    <section id="certificates" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">05 — Credentials</span>
+        <h2>Certificates</h2>
+        <div class="section-line"></div>
+      </div>
+      <div style="text-align:center; margin-bottom: 36px;">
+        <button id="viewAllCerts" class="view-all-btn">View All Certificates →</button>
+      </div>
+      <div class="cert-main-grid">
+        <div class="certificate-card" data-aos="fade-up" data-pdf="certificates/Google Data analytics.pdf">
+          <div class="cert-icon">📊</div>
+          <div class="certificate-title">Google Data Analytics Professional Certificate (Google)</div>
+          <div class="cert-preview">Data cleaning, SQL, Tableau, R</div>
+          <button class="view-pdf-btn">View Certificate</button>
+        </div>
+        <div class="certificate-card" data-aos="fade-up" data-aos-delay="100" data-pdf="certificates/IBM Python.pdf">
+          <div class="cert-icon">🐍</div>
+          <div class="certificate-title">Python for Data Science, AI & Development (IBM)</div>
+          <div class="cert-preview">Pandas, NumPy, ML algorithms</div>
+          <button class="view-pdf-btn">View Certificate</button>
+        </div>
+        <div class="certificate-card" data-aos="fade-up" data-aos-delay="200" data-pdf="certificates/Programming Fundamentals.pdf">
+          <div class="cert-icon">💻</div>
+          <div class="certificate-title">Programming for Everybody (University of Michigan)</div>
+          <div class="cert-preview">Python fundamentals</div>
+          <button class="view-pdf-btn">View Certificate</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate Gallery -->
+    <section id="cert-gallery" class="page-section">
+      <button id="backToCerts" class="back-btn">← Back to Certificates</button>
+      <div class="section-header">
+        <span class="section-eyebrow">Full Gallery</span>
+        <h2>All Certificates</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="pdf-gallery">
+        <div class="pdf-grid" id="pdfGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">06 — Toolkit</span>
+        <h2>Skills</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item" data-tilt>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+          <span>SQL</span>
+        </div>
+        <div class="skill-item" data-tilt>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" />
+          <span>Power BI</span>
+        </div>
+        <div class="skill-item" data-tilt>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <span>Python</span>
+        </div>
+        <div class="skill-item" data-tilt>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" />
+          <span>Excel</span>
+        </div>
+        <div class="skill-item" data-tilt>
+          <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" />
+          <span>Tableau</span>
+        </div>
+        <div class="skill-item" data-tilt>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
+          <span>Pandas</span>
+        </div>
+        <div class="skill-item" data-tilt>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+          <span>TensorFlow</span>
+        </div>
+        <div class="skill-item" data-tilt>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" />
+          <span>OpenCV</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">07 — Reach Out</span>
+        <h2>Get in Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-wrap">
+        <div>
+          <form action="mailto:piysh345757@gmail.com" method="GET" enctype="text/plain" onsubmit="return validateForm()">
+            <div class="contact-form-inner">
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="body" required placeholder="Write your message here..."></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Your Email</label>
+                <input type="email" id="email" name="from" required placeholder="your@email.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="What's this about?" />
+              </div>
+              <div>
+                <input type="submit" value="Send Message →" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="contact-aside">
+          <h3>Direct Contact</h3>
+          <a href="mailto:piysh345757@gmail.com" class="contact-link">
+            <div class="contact-link-icon">✉️</div>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-text">piysh345757@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/sushant-kumar-367a11193/" target="_blank" rel="noopener" class="contact-link">
+            <div class="contact-link-icon">💼</div>
+            <div>
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-text">sushant-kumar-367a11193</div>
+            </div>
+          </a>
+          <a href="https://github.com/sushassassin" target="_blank" rel="noopener" class="contact-link">
+            <div class="contact-link-icon">🐙</div>
+            <div>
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-text">sushassassin</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOCIALS ========== -->
+    <section id="socials" class="page-section">
+      <div class="section-header">
+        <span class="section-eyebrow">08 — Connect</span>
+        <h2>Connect with Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="socials-grid">
+        <a href="https://github.com/sushassassin" target="_blank" rel="noopener" class="social-card">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="var(--text-secondary)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sushant-kumar-367a11193/" target="_blank" rel="noopener" class="social-card">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/sush.k.r_/?hl=en" target="_blank" rel="noopener" class="social-card">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="url(#ig-grad)"><defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="25%" style="stop-color:#e6683c"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="75%" style="stop-color:#cc2366"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+  <footer>
+    <p>© 2026 Sushant Kumar · Duisburg</p>
+    <p>Built with care · <a href="mailto:piysh345757@gmail.com" style="color:var(--gold);text-decoration:none">piysh345757@gmail.com</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
